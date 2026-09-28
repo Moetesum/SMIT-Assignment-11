@@ -1,0 +1,496 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f8fd;
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1e3a6e;
+}
+
+img {
+    display: block;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background-color: #17396b;
+    color: #ffffff;
+    padding: 0 36px;
+    height: 77px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1224px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 31px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.logo-icon {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-links a.active-nav {
+    background-color: #3b8bff;
+    font-weight: 600;
+}
+
+/* ---------- Main ---------- */
+.main-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 8px 8px 30px;
+}
+
+/* ---------- Hero ---------- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dbeafe;
+    padding: 30px 46px;
+    border-radius: 8px;
+    min-height: 258px;
+    margin-bottom: 30px;
+}
+
+.hero-tag {
+    display: block;
+    font-size: 19px;
+    color: #1d6fe0;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    line-height: 1.15;
+    color: #0f2f66;
+    font-weight: 800;
+    margin: 10px 0 18px;
+}
+
+.hero-text p {
+    color: #465575;
+    font-size: 22px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.hero-illustration img {
+    width: 460px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ---------- Layout ---------- */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.63fr 1fr;
+    gap: 28px;
+    align-items: start;
+    padding: 0 22px;
+}
+
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .hero-illustration {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 14px 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .hero-section {
+        padding: 24px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+    .hero-text p br {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1.5px solid #bfdcf7;
+    margin-bottom: 26px;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 16px 24px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.card-header h2 img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.blue-header {
+    background-color: #dbeefe;
+    color: #0f3a78;
+}
+
+.green-header {
+    background-color: #e3f5e5;
+    color: #0f4a3a;
+}
+
+.purple-header {
+    background-color: #e4e0fb;
+    color: #3d1fa8;
+}
+
+.card-body {
+    padding: 20px 24px;
+}
+
+/* Available courses */
+.available-courses-card .card-body {
+    padding: 20px 50px 24px;
+}
+
+.courses-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    gap: 12px 30px;
+}
+
+.courses-list li {
+    position: relative;
+    padding-left: 28px;
+    color: #14336b;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.courses-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border-radius: 50%;
+    background-color: #1d6fe0;
+}
+
+/* Students table */
+.students-card {
+    border-color: #cfe8d4;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    padding: 20px 18px 18px;
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #bfd9f2;
+}
+
+.students-table th {
+    background-color: #dbeefe;
+    color: #0f2f66;
+    padding: 12px 14px;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1px solid #bfd9f2;
+}
+
+.students-table td {
+    padding: 10px 14px;
+    border: 1px solid #d5e4f3;
+    color: #1e3a6e;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 11px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.badge.active {
+    background-color: #d3f2d5;
+    color: #1a6b2c;
+    border: 1px solid #b9e4bd;
+}
+
+.badge.inactive {
+    background-color: #fdd9d9;
+    color: #d01a1a;
+    border: 1px solid #f7bcbc;
+}
+
+/* Why join us */
+.why-card {
+    background-color: #f1eefd;
+    border-color: #d5dcf7;
+}
+
+.why-card .card-body {
+    padding: 16px 30px 18px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.benefits-list li {
+    position: relative;
+    padding-left: 36px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #1a3d8f;
+}
+
+.benefits-list li::before {
+    content: "\2713";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    font-weight: 800;
+    color: #4a24c4;
+}
+
+/* ---------- Form ---------- */
+.form-card .card-body {
+    padding: 18px 18px 22px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group > label,
+.group-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f2f66;
+    margin-bottom: 7px;
+}
+
+.req {
+    color: #e11d1d;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #c8def5;
+    border-radius: 6px;
+    background-color: #fbfdff;
+    font-family: inherit;
+    font-size: 15px;
+    color: #1e3a6e;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #7c8aa5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3b8bff;
+    box-shadow: 0 0 0 3px rgba(59, 139, 255, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 72px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px 0 2px;
+}
+
+.radio-group label,
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e3a6e;
+    margin: 0;
+}
+
+.radio-group input,
+.checkbox-grid input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #1d6fe0;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    gap: 12px 10px;
+    padding-left: 2px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #23964a;
+    color: #ffffff;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 6px;
+}
+
+.submit-btn:hover {
+    background-color: #1c7f3d;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background-color: #17396b;
+    color: #ffffff;
+    padding: 0 36px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-tagline {
+    display: flex;
+    align-items: center;
+}
+
+.footer-tagline span + span::before {
+    content: "\2022";
+    margin: 0 14px;
+}

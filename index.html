@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Learning Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="icons/graduate.png" alt="" class="logo-icon">
+                <span>Learning Center</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Courses</a>
+                <a href="#">Students</a>
+                <a href="#" class="active-nav">Registration</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="hero-section">
+            <div class="hero-text">
+                <span class="hero-tag">JOIN OUR LEARNING COMMUNITY</span>
+                <h1>Student Registration</h1>
+                <p>Fill out the form below to register for your favorite course<br>and start your learning journey with us.</p>
+            </div>
+            <div class="hero-illustration">
+                <img src="icons/books.png" alt="Graduation cap on books with a plant">
+            </div>
+        </section>
+
+        <div class="content-grid">
+
+            <div class="left-column">
+
+                <div class="card available-courses-card">
+                    <div class="card-header blue-header">
+                        <h2><img src="icons/book.png" alt=""> Available Courses</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="courses-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Python</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card students-card">
+                    <div class="card-header green-header">
+                        <h2><img src="icons/group.png" alt=""> Our Students</h2>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="students-table">
+                            <thead>
+                                <tr>
+                                    <th>Roll No</th>
+                                    <th>Student Name</th>
+                                    <th>Course</th>
+                                    <th>Batch</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>101</td>
+                                    <td>Ali Raza</td>
+                                    <td>HTML</td>
+                                    <td>Batch 01</td>
+                                    <td><span class="badge active">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>102</td>
+                                    <td>Sara Khan</td>
+                                    <td>CSS</td>
+                                    <td>Batch 01</td>
+                                    <td><span class="badge active">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>103</td>
+                                    <td>Ahmed Malik</td>
+                                    <td>JavaScript</td>
+                                    <td>Batch 02</td>
+                                    <td><span class="badge active">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td>104</td>
+                                    <td>Hina Fatima</td>
+                                    <td>React</td>
+                                    <td>Batch 02</td>
+                                    <td><span class="badge inactive">Inactive</span></td>
+                                </tr>
+                                <tr>
+                                    <td>105</td>
+                                    <td>Usman Ali</td>
+                                    <td>Python</td>
+                                    <td>Batch 03</td>
+                                    <td><span class="badge active">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card why-card">
+                    <div class="card-header purple-header">
+                        <h2><img src="icons/info.png" alt=""> Why Join Us?</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="benefits-list">
+                            <li>Expert Instructors</li>
+                            <li>Practical Learning</li>
+                            <li>Hands-on Projects</li>
+                            <li>Certificate Programs</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="right-column">
+                <div class="card form-card">
+                    <div class="card-header blue-header">
+                        <h2><img src="icons/user.png" alt=""> Registration Form</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="#" method="POST">
+
+                            <div class="form-group">
+                                <label for="fullname">Full Name <span class="req">*</span></label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password <span class="req">*</span></label>
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact">Contact Number <span class="req">*</span></label>
+                                <input type="text" id="contact" name="contact" placeholder="03xx-xxxxxxx" required>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="group-label">Gender <span class="req">*</span></span>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="gender" value="male" checked> Male</label>
+                                    <label><input type="radio" name="gender" value="female"> Female</label>
+                                    <label><input type="radio" name="gender" value="other"> Other</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="group-label">Select Course <span class="req">*</span></span>
+                                <div class="checkbox-grid">
+                                    <label><input type="checkbox" name="courses" value="html"> HTML</label>
+                                    <label><input type="checkbox" name="courses" value="css"> CSS</label>
+                                    <label><input type="checkbox" name="courses" value="javascript"> JavaScript</label>
+                                    <label><input type="checkbox" name="courses" value="react"> React</label>
+                                    <label><input type="checkbox" name="courses" value="python"> Python</label>
+                                    <label><input type="checkbox" name="courses" value="webdev"> Web Development</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Address <span class="req">*</span></label>
+                                <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit Registration</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Learning Center. All Rights Reserved.</p>
+            <p class="footer-tagline"><span>Learn</span><span>Grow</span><span>Build Your Future</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
